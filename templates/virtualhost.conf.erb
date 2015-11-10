@@ -1,0 +1,16 @@
+<VirtualHost *:80>
+    ServerName <%= server_name %>
+
+    # Tell Apache and Passenger where your app's 'public' directory is
+    DocumentRoot <%= application_path %>/public
+
+    PassengerRuby /path-to-ruby
+
+    # Relax Apache security settings
+    <Directory <%= application_path %>/public>
+      Allow from all
+      Options -MultiViews
+      # Uncomment this if you're on Apache > 2.4:
+      Require all granted
+    </Directory>
+</VirtualHost>
