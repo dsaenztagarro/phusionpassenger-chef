@@ -5,10 +5,8 @@
 
 phusionpassenger Cookbook
 =========================
-TODO: Enter the cookbook description here.
 
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+Ultra lightweight cookbook for installing [Phusion Passenger 5](https://www.phusionpassenger.com/)
 
 Requirements
 ------------
