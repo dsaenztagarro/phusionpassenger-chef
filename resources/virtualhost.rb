@@ -2,8 +2,8 @@ resource_name :passenger_virtualhost
 
 default_action :create
 
-property :server_name, String, default: ''
-property :application_path, String, default: ''
+property :server_name, String, required: true
+property :application_path, String, required: true
 
 action :enable do
   template "/etc/apache2/sites-available/#{server_name}.conf" do
@@ -11,11 +11,11 @@ action :enable do
     variables server_name: server_name, application_path: application_path
   end
 
-  execute 'enable_site' do
+  execute 'enabling_site' do
     command "a2ensite #{server_name}"
   end
 
-  execute 'apache_restart' do
+  execute 'restarting_apache' do
     command 'apachectl restart'
   end
 end
