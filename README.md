@@ -20,26 +20,11 @@ Attributes
 ----------
 
 #### phusionpassenger::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['phusionpassenger']['keyserver']</tt></td>
-    <td>String</td>
-    <td>key server</td>
-    <td><tt>hkp://keyserver.ubuntu.com:80</tt></td>
-  </tr>
-  <tr>
-    <td><tt>['phusionpassenger']['recv_keys']</tt></td>
-    <td>String</td>
-    <td>key server</td>
-    <td><tt>561F9B9CAC40B2F7</tt></td>
-  </tr>
-</table>
+
+See `attributes/default.rb` for default values.
+
+* `node['phusionpassenger']['keyserver'] - Key server url
+* `node['phusionpassenger']['recv_keys'] - Key id
 
 Usage
 -----
