@@ -1,3 +1,4 @@
+[![Cookbook Version](https://img.shields.io/cookbook/v/phusionpassenger.svg)](https://community.opscode.com/cookbooks/phusionpassenger)
 [![Build Status](https://travis-ci.org/dsaenztagarro/phusionpassenger-chef.svg?branch=master)](https://travis-ci.org/dsaenztagarro/phusionpassenger-chef)
 [![Code Climate](https://codeclimate.com/github/dsaenztagarro/phusionpassenger-chef/badges/gpa.svg)](https://codeclimate.com/github/dsaenztagarro/phusionpassenger-chef)
 [![Coverage Status](https://coveralls.io/repos/dsaenztagarro/phusionpassenger-chef/badge.svg?branch=master&service=github)](https://coveralls.io/github/dsaenztagarro/phusionpassenger-chef?branch=master)
