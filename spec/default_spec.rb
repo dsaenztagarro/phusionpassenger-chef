@@ -8,28 +8,8 @@ describe 'phusionpassenger::default' do
     end.converge described_recipe
   end
 
-  it 'includes the `system_requirements` recipe' do
-    expect(chef_run).to include_recipe('phusionpassenger::system_requirements')
-  end
-
-  it 'runs a execute when downloading public key' do
-    expect(chef_run).to run_execute('downloading_public_key')
-  end
-
-  it 'runs a execute when adding apt repository' do
-    expect(chef_run).to run_execute('adding_apt_repository')
-  end
-
-  it 'installs a package when installing passenger apache module' do
-    expect(chef_run).to install_package('installing_passenger_apache_module')
-  end
-
-  it 'runs a execute when enabling passenger apache module' do
-    expect(chef_run).to run_execute('enabling_passenger_apache_module')
-  end
-
-  it 'runs a execute when restarting apache' do
-    expect(chef_run).to run_execute('restarting_apache')
+  it 'includes the `install` recipe' do
+    expect(chef_run).to include_recipe('phusionpassenger::install')
   end
 
   it 'converges successfully' do

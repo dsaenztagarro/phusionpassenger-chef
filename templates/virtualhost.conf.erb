@@ -4,7 +4,7 @@
     # Tell Apache and Passenger where your app's 'public' directory is
     DocumentRoot <%= application_path %>/public
 
-    PassengerRuby /path-to-ruby
+    PassengerRuby <%= ruby_command %>
 
     # Relax Apache security settings
     <Directory <%= application_path %>/public>
