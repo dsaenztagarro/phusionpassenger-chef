@@ -7,22 +7,16 @@
 # All rights reserved - Do Not Redistribute
 #
 
-execute 'apt-get update' do
-  action :run
-end
-
-package 'apache2'
+include_recipe 'phusionpassenger::system_requirements'
 
 keyserver = node['phusionpassenger']['keyserver']
 recv_keys = node['phusionpassenger']['recv_keys']
 
-execute 'apt-key adv' do
+execute 'downloading_public_key' do
   command "apt-key adv --keyserver #{keyserver} --recv-keys #{recv_keys}"
 end
 
-package %w(apt-transport-https ca-certificates)
-
-execute 'add_apt_repository' do
+execute 'adding_apt_repository' do
   command "sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger trusty main > /etc/apt/sources.list.d/passenger.list'"
 end
 
@@ -30,12 +24,14 @@ execute 'apt-get update' do
   action :run
 end
 
-package 'libapache2-mod-passenger'
+package 'installing_passenger_apache_module' do
+  package_name 'libapache2-mod-passenger'
+end
 
-execute 'enable_passenger_apache_module' do
+execute 'enabling_passenger_apache_module' do
   command 'a2enmod passenger'
 end
 
-execute 'restart_apache' do
+execute 'restarting_apache' do
   command 'apachectl restart'
 end

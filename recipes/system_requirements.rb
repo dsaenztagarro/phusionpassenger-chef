@@ -11,4 +11,9 @@ execute 'apt-get update' do
   action :run
 end
 
-package %w(apache2 apt-transport-https ca-certificates)
+package 'apache2'
+
+package 'adding_https_support_apt' do
+  package_name %w(apt-transport-https ca-certificates)
+end
+

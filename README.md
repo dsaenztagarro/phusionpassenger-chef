@@ -34,9 +34,6 @@ See `attributes/default.rb` for default values.
 Usage
 -----
 #### phusionpassenger::default
-TODO: Write usage instructions for each cookbook.
-
-e.g.
 Just include `phusionpassenger` in your node's `run_list`:
 
 ```json
@@ -50,9 +47,6 @@ Just include `phusionpassenger` in your node's `run_list`:
 
 Contributing
 ------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
 1. Fork the repository on Github
 2. Create a named feature branch (like `add_component_x`)
 3. Write your change
@@ -62,4 +56,4 @@ e.g.
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors: David Saenz Tagarro
