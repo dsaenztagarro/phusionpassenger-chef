@@ -1,3 +1,7 @@
+resource_name :passenger_virtualhost
+
+default_action :create
+
 property :server_name, String, default: ''
 property :application_path, String, default: ''
 
@@ -15,3 +19,4 @@ action :enable do
     command 'apachectl restart'
   end
 end
+
