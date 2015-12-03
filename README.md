@@ -10,11 +10,15 @@ Ultra lightweight cookbook for installing [Phusion Passenger 5](https://www.phus
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
 
-e.g.
+#### Platforms
+- Ubuntu 14.04 LTS
+
+#### Chef
+- Chef 12.2.0
+
 #### packages
-- `toaster` - phusionpassenger needs toaster to brown your bagel.
+- `phusionpassenger::default` - Installs Phusion Passenger
 
 Attributes
 ----------
@@ -23,8 +27,8 @@ Attributes
 
 See `attributes/default.rb` for default values.
 
-* `node['phusionpassenger']['keyserver'] - Key server url
-* `node['phusionpassenger']['recv_keys'] - Key id
+* `node['phusionpassenger']['keyserver']` - Key server url
+* `node['phusionpassenger']['recv_keys']` - Key id
 
 Usage
 -----
