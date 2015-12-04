@@ -25,4 +25,10 @@ rescue LoadError
   puts '>>>>> FoodCritic gem not loaded, omitting tasks' unless ENV['CI']
 end
 
+desc 'Publish cookbook at Chef Supermarket'
+task :share do
+  `knife cookbook site share "phusionpassenger" "Web Servers"`
+end
+
+
 task default: [:foodcritic, :unit]
