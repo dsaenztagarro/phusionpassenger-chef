@@ -30,5 +30,4 @@ task :share do
   `knife cookbook site share "phusionpassenger" "Web Servers"`
 end
 
-
 task default: [:foodcritic, :unit]

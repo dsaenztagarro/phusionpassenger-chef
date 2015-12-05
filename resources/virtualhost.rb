@@ -33,4 +33,3 @@ action :enable do
     command 'apachectl restart'
   end
 end
-
