@@ -12,15 +12,14 @@ action :create do
     level :debug
   end
 
-  virtualhost_variables = {
-    server_name: server_name,
-    application_path: application_path,
-    ruby_command: ruby_command
-  }
-
   template "/etc/apache2/sites-available/#{server_name}.conf" do
     source 'virtualhost.conf.erb'
-    variables virtualhost_variables
+    cookbook 'phusionpassenger'
+    variables({
+      server_name: server_name,
+      application_path: application_path,
+      ruby_command: ruby_command
+    })
   end
 end
 
