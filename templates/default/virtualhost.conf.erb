@@ -1,8 +1,10 @@
 <VirtualHost *:80>
     ServerName <%= @server_name %>
-    ServerAlias <%= "www.#{@server_name} %>
+    ServerAlias <%= "www.#{@server_name}" %>
     DocumentRoot <%= @application_path %>/public
     PassengerRuby <%= @ruby_command %>
+    ErrorLog /var/log/apache2/<%= @application_name %>_error.log
+    AccessLog /var/log/apache2/<%= @application_name %>_access.log
     # Relax Apache security settings
     <Directory <%= @application_path %>/public>
       Allow from all

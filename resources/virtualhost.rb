@@ -3,14 +3,12 @@ resource_name :passenger_virtualhost
 default_action :create
 
 property :server_name, String, required: true
+property :user_name, String, required: true
 property :application_path, String
 
 action :create do
-  cmd = shell_out('passenger-config about ruby-command')
+  cmd = login_shell('passenger-config about ruby-command', user: user_name)
   ruby_command = cmd.stdout.match(/Command: (.*)\n/i).captures.first
-  log "ruby_command: #{ruby_command}" do
-    level :debug
-  end
 
   template "/etc/apache2/sites-available/#{server_name}.conf" do
     source 'virtualhost.conf.erb'
