@@ -13,20 +13,25 @@ action :create do
   template "/etc/apache2/sites-available/#{server_name}.conf" do
     source 'virtualhost.conf.erb'
     cookbook 'phusionpassenger'
-    variables({
+    variables(
       server_name: server_name,
       document_root: document_root,
       ruby_command: ruby_command
-    })
+    )
   end
 end
 
 action :enable do
+  # TODO: Extract to cookbook apache_sl
+  #
+  # apache_site server_name do
+  #   action :enable
+  # end
   execute 'enabling_site' do
     command "a2ensite #{server_name}"
   end
 
-  execute 'restarting_apache' do
-    command 'apachectl restart'
-  end
+  # execute 'restarting_apache' do
+  #   command 'apachectl restart'
+  # end
 end
