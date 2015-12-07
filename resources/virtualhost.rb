@@ -4,7 +4,7 @@ default_action :create
 
 property :server_name, String, required: true
 property :user_name, String, required: true
-property :application_path, String
+property :document_root, String
 
 action :create do
   cmd = login_shell('passenger-config about ruby-command', user: user_name)
@@ -15,7 +15,7 @@ action :create do
     cookbook 'phusionpassenger'
     variables({
       server_name: server_name,
-      application_path: application_path,
+      document_root: document_root,
       ruby_command: ruby_command
     })
   end
