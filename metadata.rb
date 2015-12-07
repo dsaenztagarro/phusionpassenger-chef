@@ -11,5 +11,5 @@ recipe 'phusionpassenger::install', 'Installs Phusion Passenger'
 
 %w(debian ubuntu).each { |os| supports os }
 
-source_url 'https://github.com/dsaenztagarro/phusionpassenger' if respond_to?(:source_url)
-issues_url 'https://github.com/dsaenztagarro/phusionpassenger/issues' if respond_to?(:issues_url)
+source_url 'https://github.com/dsaenztagarro/phusionpassenger-chef' if respond_to?(:source_url)
+issues_url 'https://github.com/dsaenztagarro/phusionpassenger-chef/issues' if respond_to?(:issues_url)
