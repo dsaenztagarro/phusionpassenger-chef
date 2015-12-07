@@ -12,12 +12,12 @@ describe 'phusionpassenger::install_test' do
     expect(chef_run).to include_recipe('phusionpassenger::install')
   end
 
-  it 'creates the passenger virtualhost' do
-    expect(chef_run).to create_passenger_virtualhost('creating_vhost')
+  it 'creates the passenger site' do
+    expect(chef_run).to create_passenger_site('creating_site')
   end
 
-  it 'enables the passenger virtualhost' do
-    expect(chef_run).to enable_passenger_virtualhost('enabling_vhost')
+  it 'enables the passenger site' do
+    expect(chef_run).to enable_passenger_site('enabling_site')
   end
 
   it 'converges successfully' do

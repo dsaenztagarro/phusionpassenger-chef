@@ -9,12 +9,12 @@
 
 include_recipe 'phusionpassenger::install'
 
-passenger_virtualhost 'creating_vhost' do
+passenger_site 'creating_site' do
   server_name 'myserver.test'
   document_root '/www/deploy/app/releases/current'
 end
 
-passenger_virtualhost 'enabling_vhost' do
+passenger_site 'enabling_site' do
   server_name 'myserver.test'
   action :enable
 end

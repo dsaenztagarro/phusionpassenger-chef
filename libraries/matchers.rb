@@ -1,12 +1,12 @@
 if defined?(ChefSpec)
 
-  # passenger_virtualhost
+  # passenger_site
 
-  def create_passenger_virtualhost(resource_name)
-    ChefSpec::Matchers::ResourceMatcher.new(:passenger_virtualhost, :create, resource_name)
+  def create_passenger_site(resource_name)
+    ChefSpec::Matchers::ResourceMatcher.new(:passenger_site, :create, resource_name)
   end
 
-  def enable_passenger_virtualhost(resource_name)
-    ChefSpec::Matchers::ResourceMatcher.new(:passenger_virtualhost, :enable, resource_name)
+  def enable_passenger_site(resource_name)
+    ChefSpec::Matchers::ResourceMatcher.new(:passenger_site, :enable, resource_name)
   end
 end

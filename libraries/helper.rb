@@ -1,4 +1,5 @@
 module Phusionpassenger
+  # General purpose cookbook helpers
   module Helper
     include Chef::Mixin::ShellOut
 
