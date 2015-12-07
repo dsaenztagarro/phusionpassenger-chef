@@ -11,7 +11,7 @@ include_recipe 'phusionpassenger::install'
 
 passenger_virtualhost 'creating_vhost' do
   server_name 'myserver.test'
-  application_path '/www/deploy/app/releases/current'
+  document_root '/www/deploy/app/releases/current'
 end
 
 passenger_virtualhost 'enabling_vhost' do
