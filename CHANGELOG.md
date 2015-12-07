@@ -5,7 +5,7 @@ This file is used to list changes made in each version of the phusionpassenger c
 
 0.1.0
 -----
-- [your_name] - Initial release of phusionpassenger
+- [David Saenz Tagarro] - Initial release of phusionpassenger
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
