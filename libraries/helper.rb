@@ -10,6 +10,10 @@ module Phusionpassenger
     def login_shell(command, options = {})
       shell_out("bash -l -c \"#{command}\"", options)
     end
+
+    def login_shell!(command, options = {})
+      shell_out!("bash -l -c \"#{command}\"", options)
+    end
   end
 end
 
