@@ -31,6 +31,29 @@ See `attributes/default.rb` for default values.
 * `node['phusionpassenger']['keyserver']` - Key server url
 * `node['phusionpassenger']['recv_keys']` - Key id
 
+Resources
+---------
+
+Example creating a site
+
+```ruby
+passenger_site 'creating_site' do
+  document_root '/var/www/application/releases/current'
+  environment 'USER' => 'deployer', 'HOME' => '/home/deployer'
+  server 'application.test'
+  user 'deployer'
+end
+```
+
+Example enabling a site
+
+```ruby
+passenger_site 'enabling_site' do
+  server 'application.test'
+  action :enable
+end
+```
+
 Usage
 -----
 #### phusionpassenger::default
