@@ -10,11 +10,13 @@
 include_recipe 'phusionpassenger::install'
 
 passenger_site 'creating_site' do
-  server_name 'myserver.test'
-  document_root '/www/deploy/app/releases/current'
+  document_root '/var/www/application/current/public'
+  environment 'USER' => 'deployer', 'HOME' => '/home/deployer'
+  server 'myserver.test'
+  user 'deployer'
 end
 
 passenger_site 'enabling_site' do
-  server_name 'myserver.test'
+  server 'application.test'
   action :enable
 end
