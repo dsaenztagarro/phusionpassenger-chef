@@ -9,10 +9,10 @@ property :user, String, required: true
 property :friendly_error_pages, kind_of: [TrueClass, FalseClass], default: false
 
 action :create do
-  cmd = login_shell('passenger-config about ruby-command',
+  cmd = login_shell!('passenger-config about ruby-command',
                     user: user, environment: environment)
   ruby = cmd.stdout.match(/Command: (.*)\n/i).captures.first
-  application = server.gsub '.', '_'
+  application = server.tr '.', '_'
 
   %W(/var/log/apache2/#{application}_error.log
      /var/log/apache2/#{application}_access.log).each do |filepath|
