@@ -5,12 +5,17 @@ This file is used to list changes made in each version of the phusionpassenger c
 
 0.1.0
 -----
-- [David Saenz Tagarro] - Initial release of phusionpassenger
+- Initial release of phusionpassenger
 
 0.1.1
 -----
-- [David Saenz Tagarro] - Refactoring parameters of site resource
-- [David Saenz Tagarro] - Added documentation for site resource
+- Refactoring parameters of site resource
+- Added documentation for site resource
+
+0.1.2
+-----
+- Fixed log entries in virtualhost conf
+- Added passenger entries in virtualhost conf
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
