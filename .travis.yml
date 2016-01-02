@@ -2,7 +2,6 @@
 language: ruby
 rvm:
   - 2.1.0
-cache: bundler
 sudo: false
 addons:
   apt:
@@ -12,6 +11,9 @@ addons:
       - chefdk
 env:
 - CI=true
+
+before_deploy:
+  - rvm 2.1.0 do gem install net-ssh -v 2.9.2
 
 install:
   - chef exec bundle install --without=development --without=chef
