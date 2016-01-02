@@ -1,7 +1,7 @@
 # Use Travis's cointainer based infrastructure
 language: ruby
 rvm:
-  - 2.2.3
+  - 2.1.0
 sudo: false
 addons:
   apt:

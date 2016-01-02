@@ -15,6 +15,7 @@ source 'https://rubygems.org'
 group :development do
   gem 'test-kitchen', '~> 1.4.2'
   gem 'kitchen-vagrant'
+  gem 'serverspec', '~> 2.27.0'
 end
 
 # Executables provided by ChefDK
@@ -33,8 +34,4 @@ group :test do
   gem 'coveralls', '~> 0.8.10'
   gem 'simplecov', '~> 0.11.0'
   gem 'simplecov-console', '~> 0.2.0'
-end
-
-group :integration do
-  gem 'serverspec', '~> 2.27.0'
 end
