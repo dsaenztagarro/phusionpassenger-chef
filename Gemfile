@@ -36,5 +36,5 @@ group :test do
 end
 
 group :integration do
-  gem 'serverspec', '~> 2.24.0'
+  gem 'serverspec', '~> 2.27.0'
 end
