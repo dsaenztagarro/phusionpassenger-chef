@@ -20,6 +20,7 @@ end
 
 # Executables provided by ChefDK
 group :chef do
+  gem 'chefspec', '~> 4.4.0'
   gem 'librarian-chef'
   gem 'foodcritic', '~> 5.0.0'
   gem 'rspec', '~> 3.4.0'
@@ -30,7 +31,6 @@ group :test do
   gem 'berkshelf', '~> 4.0.1'
   gem 'reek', '~> 3.7.0'
   gem 'cane', '~> 2.6.2'
-  gem 'chefspec', '~> 4.4.0'
   gem 'coveralls', '~> 0.8.10'
   gem 'simplecov', '~> 0.11.0'
   gem 'simplecov-console', '~> 0.2.0'
