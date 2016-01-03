@@ -16,7 +16,7 @@ execute 'downloading_public_key' do
   command "apt-key adv --keyserver #{keyserver} --recv-keys #{recv_keys}"
 end
 
-execute 'adding_apt_repository' do
+execute 'adding_passenger_apt_repository' do
   command "sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger trusty main > /etc/apt/sources.list.d/passenger.list'"
 end
 

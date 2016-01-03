@@ -16,8 +16,8 @@ describe 'phusionpassenger::install' do
     expect(chef_run).to run_execute('downloading_public_key')
   end
 
-  it 'runs a execute when adding apt repository' do
-    expect(chef_run).to run_execute('adding_apt_repository')
+  it 'runs a execute when adding passenger apt repository' do
+    expect(chef_run).to run_execute('adding_passenger_apt_repository')
   end
 
   it 'installs a package when installing passenger apache module' do

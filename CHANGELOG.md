@@ -22,6 +22,9 @@ This file is used to list changes made in each version of the phusionpassenger c
 -----
 - Update dependencies: `reek`, `chefspec`
 
+0.1.4
+-----
+- Renamed `adding_apt_repository` resource to `adding_passenger_apt_repository`
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
