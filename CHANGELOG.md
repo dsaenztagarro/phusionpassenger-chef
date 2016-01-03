@@ -16,6 +16,7 @@ This file is used to list changes made in each version of the phusionpassenger c
 -----
 - Fixed log entries in virtualhost conf
 - Added passenger entries in virtualhost conf
+- Add `server_alias` property to resource
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.

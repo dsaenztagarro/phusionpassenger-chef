@@ -40,7 +40,8 @@ Example creating a site
 passenger_site 'creating_site' do
   document_root '/var/www/application/releases/current'
   environment 'USER' => 'deployer', 'HOME' => '/home/deployer'
-  server 'application.test'
+  server_name 'application.test'
+  server_alias %w(www.application.test)
   user 'deployer'
 end
 ```
@@ -49,7 +50,7 @@ Example enabling a site
 
 ```ruby
 passenger_site 'enabling_site' do
-  server 'application.test'
+  server_name 'application.test'
   action :enable
 end
 ```
@@ -66,6 +67,13 @@ Just include `phusionpassenger` in your node's `run_list`:
     "recipe[phusionpassenger]"
   ]
 }
+```
+
+Sharing
+-------
+
+```
+knife cookbook site share "phusionpassenger" "Web Servers"
 ```
 
 Contributing

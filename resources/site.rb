@@ -13,10 +13,9 @@ action :create do
   cmd = login_shell!('passenger-config about ruby-command',
                     user: user, environment: environment)
   ruby = cmd.stdout.match(/Command: (.*)\n/i).captures.first
-  # application = server_name.tr('.', '_')
 
-  %W(/var/log/apache2/#{application}_error.log
-     /var/log/apache2/#{application}_access.log).each do |filepath|
+  %W(/var/log/apache2/#{server_name}_error.log
+     /var/log/apache2/#{server_name}_access.log).each do |filepath|
     file filepath do
       owner user
       group 'www-data'
@@ -24,11 +23,10 @@ action :create do
     end
   end
 
-  template "/etc/apache2/sites-available/#{server_name}" do
+  template "/etc/apache2/sites-available/#{server_name}.conf" do
     source 'virtualhost.conf.erb'
     cookbook 'phusionpassenger'
     variables(
-      application: application,
       document_root: document_root || "/var/www/#{server_name}/current/public",
       friendly_error_pages: friendly_error_pages ? 'on' : 'off',
       ruby: ruby,
