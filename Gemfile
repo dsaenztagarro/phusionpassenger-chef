@@ -12,6 +12,8 @@ source 'https://rubygems.org'
 #   gem "vagrant-omnibus", github: "schisamo/vagrant-omnibus"
 # end
 
+gem 'net-ssh', '2.7'
+
 group :development do
   gem 'test-kitchen', '~> 1.4.2'
   gem 'kitchen-vagrant'
