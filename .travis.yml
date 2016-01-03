@@ -16,7 +16,8 @@ before_deploy:
   - rvm 2.1.0 do gem install net-ssh -v 2.9.2
 
 install:
-  - chef exec bundle install --without=development --without=chef
+  # - chef exec bundle install --without=development --without=chef
+  - chef exec bundle show net-ssh
 
 branches:
   only:
