@@ -21,9 +21,6 @@ This file is used to list changes made in each version of the phusionpassenger c
 0.1.3
 -----
 - Update dependencies: `reek`, `chefspec`
-
-0.1.4
------
 - Renamed `adding_apt_repository` resource to `adding_passenger_apt_repository`
 
 - - -
