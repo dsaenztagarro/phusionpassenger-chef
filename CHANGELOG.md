@@ -18,6 +18,11 @@ This file is used to list changes made in each version of the phusionpassenger c
 - Added passenger entries in virtualhost conf
 - Add `server_alias` property to resource
 
+0.1.3
+-----
+- Update dependencies: `reek`, `chefspec`
+
+
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
 
