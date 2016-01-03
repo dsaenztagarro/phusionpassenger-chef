@@ -1,6 +1,8 @@
 <VirtualHost *:80>
-    ServerName <%= @server %>
-    ServerAlias <%= "www.#{@server}" %>
+    ServerName <%= @server_name %>
+    <% if @server_alias %>
+    ServerAlias <%= @server_alias %>
+    <% end %>
     DocumentRoot <%= @document_root %>
     PassengerRuby <%= @ruby %>
     PassengerFriendlyErrorPages <%= @friendly_error_pages %>

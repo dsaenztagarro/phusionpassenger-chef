@@ -12,6 +12,19 @@ source 'https://rubygems.org'
 #   gem "vagrant-omnibus", github: "schisamo/vagrant-omnibus"
 # end
 
+gem 'ipaddress', '~> 0.8.0'
+
+# Fix compatible version issue for gem 'net-ssh'
+# Bundler could not find compatible versions for gem "net-ssh":
+#   In Gemfile:
+#     net-ssh (= 3.0.1)
+#
+#     serverspec (~> 2.27.0) was resolved to 2.27.0, which depends on
+#       specinfra (~> 2.46) was resolved to 2.47.1, which depends on
+#         net-ssh (< 3.1, >= 2.7)
+#
+#     test-kitchen (~> 1.4.2) was resolved to 1.4.2, which depends on
+#       net-ssh (< 2.10, ~> 2.7)
 gem 'net-ssh', '2.7'
 
 group :development do
